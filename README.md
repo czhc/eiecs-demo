@@ -11,9 +11,11 @@
     6. EC2 Instance `ECSContainerInstance` with sec group `ECSContainerInstanceSecurityGroup`
     7. EC2 Instance `ClientInstanceRole` with sec group `ClientInstanceSecGroup`
     8. IAM Instance Role for client instance `ClientInstanceProfile`
-    9. SecGroup to allow 22 to [bastion], allow 443 in/out of EI Endpoint and allow 9000, 8500 to EC2 (Container Instance)
+    9. SecGroups 
+        1. allow 22 to [bastion]
+        2. allow 443 in/out of EI Endpoint from within VPC
+        3. allow 9000, 8500 to EC2 (Container Instance) from within VPC
     
-
 2. 
 
 # Resources
