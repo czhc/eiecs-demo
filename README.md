@@ -16,12 +16,12 @@
         1. allow 22 to [bastion]
         2. allow 443 in/out of EI Endpoint from within VPC
         3. allow 9000, 8500 to EC2 (Container Instance) from within VPC
+        
     
 2. Navigate to the ECS console. The Cloudformation template has also created a Task Definition named `ei-ecs-ubuntu-tfs-bridge`. 
         1. Inspect the Task Definition for 2 containers: TF ModelServer and EI-enabled TF ModelServer from Tensor Flow Serving. 
-        2. Both containers are running on ubuntu Deep Learning optimized Container Images. The EI TF MS contianer downloads the additional EI-enabled MS binary and forces EI metadata lookup from the container instance.
+        2. Both containers are running on ubuntu Deep Learning optimized Container Images. The EI TF MS container downloads the additional EI-enabled MS binary and forces EI metadata lookup from the container instance.
         3. Inspect the entry point of the containers
-
 
 
 # Resources
