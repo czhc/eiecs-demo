@@ -23,6 +23,9 @@
     1. Inspect the Task Definition for 2 containers: TF ModelServer and EI-enabled TF ModelServer from Tensor Flow Serving. 
     2. Both containers are running on ubuntu Deep Learning optimized Container Images. The EI TF MS container downloads the additional EI-enabled MS binary and forces EI metadata lookup from the container instance.
     3. Inspect the containers: 
+        ![containers](./img/Screen%20Shot%202020-03-09%20at%2011.50.18%20AM.png)
+    
+    
         * EIA container running image `tensorflow-inference-eia:1.14.0` is serving at port `9001` 
         * Non-EIA container running image `tensorflow-inference:1.14.0` is serving at `8501`. 
             
