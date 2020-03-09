@@ -19,9 +19,17 @@
         
     
 2. Navigate to the ECS console. The Cloudformation template has also created a Task Definition named `ei-ecs-ubuntu-tfs-bridge`. 
-        1. Inspect the Task Definition for 2 containers: TF ModelServer and EI-enabled TF ModelServer from Tensor Flow Serving. 
-        2. Both containers are running on ubuntu Deep Learning optimized Container Images. The EI TF MS container downloads the additional EI-enabled MS binary and forces EI metadata lookup from the container instance.
-        3. Inspect the entry point of the containers
+
+    1. Inspect the Task Definition for 2 containers: TF ModelServer and EI-enabled TF ModelServer from Tensor Flow Serving. 
+    2. Both containers are running on ubuntu Deep Learning optimized Container Images. The EI TF MS container downloads the additional EI-enabled MS binary and forces EI metadata lookup from the container instance.
+    3. Inspect the containers: 
+        * EIA container running image `tensorflow-inference-eia:1.14.0` is serving at port `9001` 
+        * Non-EIA container running image `tensorflow-inference:1.14.0` is serving at `8501`. 
+            
+3. We will benchmark the inference calls made to the two containers.
+
+    1.  
+       
 
 
 # Resources
